@@ -6,6 +6,19 @@
 
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	var text string
+	fmt.Scan(&text)
+	var reversedText string
+	for _, v := range text {
+		reversedText = string(v) + reversedText
+	}
+
+	if text == reversedText {
+		fmt.Println("Палиндром")
+	} else {
+		fmt.Println("Нет")
+	}
 }
