@@ -17,7 +17,7 @@ import (
 func main() {
 
 	text, _ := bufio.NewReader(os.Stdin).ReadString('\n')
-
+	
 	strings.TrimSuffix(text, "\n")
 	byteValue := []rune(text)
 	if unicode.IsUpper(byteValue[0]) && strings.HasSuffix(text, ".") {
